@@ -57,7 +57,8 @@ end
 # Include your application configuration below
 
 require 'cruise_control/version'
-require 'smtp_tls'
+# Wesabe doesn't use TLS, and this hack causes errors on mail servers that don't support TLS
+# require 'smtp_tls'
 
 # custom MIME type for CCTray application
 Mime::Type.register "application/cctray", :cctray
